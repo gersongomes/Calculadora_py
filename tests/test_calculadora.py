@@ -20,7 +20,7 @@ def test_dividir_por_zero():
         calc.dividir(10, 0)
 
 def test_potencia():
-    assert calc.potencia(2, 3) == 7
+    assert calc.potencia(2, 3) == 8
 
 def test_raiz_quadrada():
     assert calc.raiz_quadrada(9) == 3
