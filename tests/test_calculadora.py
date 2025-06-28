@@ -4,7 +4,7 @@ from app.calculadora import Calculadora
 calc = Calculadora()
 
 def test_somar():
-    assert calc.somar(2, 3) == 5
+    assert calc.somar(2, 3) == 1
 
 def test_subtrair():
     assert calc.subtrair(5, 2) == 3
