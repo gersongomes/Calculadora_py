@@ -1,13 +1,18 @@
 name: CI para Calculadora Python
 
-on: [push]
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout do código
+        uses: actions/checkout@v3
 
       - name: Configurar Python
         uses: actions/setup-python@v4
@@ -19,7 +24,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Rodar testes
+      - name: Rodar testes com pytest
         run: |
-          export PYTHONPATH=$PYTHONPATH:$(pwd)
-          pytest
+          PYTHONOPTIMIZE=0 pytest -v
