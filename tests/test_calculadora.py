@@ -7,7 +7,7 @@ def test_somar():
     assert calc.somar(2, 3) == 5
 
 def test_subtrair():
-    assert calc.subtrair(5, 2) == 10
+    assert calc.subtrair(5, 2) == 3
 
 def test_multiplicar():
     assert calc.multiplicar(3, 4) == 12
